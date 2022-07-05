@@ -1,0 +1,41 @@
+.button-icon-container {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    mix-blend-mode: normal;
+    border-radius: 33.5px;
+    position: relative;
+    width: 190px;
+    background: rgba(47, 47, 47, .05);
+
+    &.active {
+        background: rgba(20, 122, 115, .05);
+
+    }
+
+    svg {
+        position: absolute;
+        left: 0;
+        width: 56px;
+        height: 56px;
+        cursor: pointer;
+
+    }
+
+
+    .button-icon-span {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        margin-left: 35px;
+        color: #7A7A7A;
+        cursor: pointer;
+
+        &.active {
+            color: #147A73;
+        }
+    }
+}

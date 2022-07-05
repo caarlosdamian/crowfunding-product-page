@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import logo from "../../images/logo.svg";
 import bg from "../../images/image-hero-desktop.jpg";
 import hamburger from "../../images/icon-hamburger.svg";
@@ -19,7 +18,7 @@ export const Header = ({ setshowMenu, showMenu }: HeaderProps) => {
   return (
     <div className="header-container">
       <img
-        src={width > 375 ? hamburgerMobile : bg}
+        src={width <= 375 ? hamburgerMobile : bg}
         alt="bg"
         className="img-back"
       />
@@ -30,13 +29,14 @@ export const Header = ({ setshowMenu, showMenu }: HeaderProps) => {
       </div>
       <div
         className="header-right-content"
-        onClick={() => setshowMenu(!showMenu)}
+        
       >
         {width <= 375 ? (
           <img
             src={showMenu ? closeMenu : hamburger}
             alt="hamburger"
             className="header-right-img"
+            onClick={() => setshowMenu(!showMenu)}
           />
         ) : (
           navItems.map((item) => (

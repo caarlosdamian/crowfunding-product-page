@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  pading: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: 'Commissioner';
   font-style: normal;
@@ -13,10 +13,11 @@ body {
 
 .main {
   height: 100vh;
+  position: relative;
 
   &.active {
     background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.0001) 100%);
     mix-blend-mode: normal;
-    opacity: 0.9;
+    opacity: 1;
   }
 }
