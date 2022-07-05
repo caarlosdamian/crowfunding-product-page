@@ -1,14 +1,14 @@
-import { useState } from "react";
-import "./App.scss";
+import { useSelector } from "react-redux";
 import { Header } from "./sections/header/Header";
 import { Top } from "./sections/top/Top";
+import "./App.scss";
 
 function App() {
-  const [showMenu, setshowMenu] = useState(false);
+  const { menuActive } = useSelector((state: any) => state.toggle);
   return (
-    <main className={`main ${(showMenu && "active") || ""}`}>
-      <Header setshowMenu={setshowMenu} showMenu={showMenu} />
-      <Top showMenu={showMenu}/>
+    <main className={`main ${(menuActive && "active") || ""}`}>
+      <Header />
+      <Top showMenu={menuActive} />
     </main>
   );
 }

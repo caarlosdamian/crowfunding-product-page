@@ -7,14 +7,14 @@ import { navItems } from "../../utils/data";
 import "./Header.scss";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import { BoxMenu } from "../../components/boxMenu/BoxMenu";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleMenu } from "../../redux/toggle/toggleSlice";
 
-interface HeaderProps {
-  showMenu: boolean;
-  setshowMenu: (showMenu: boolean) => void;
-}
-
-export const Header = ({ setshowMenu, showMenu }: HeaderProps) => {
+export const Header = () => {
   const { width } = useWindowSize();
+  const dispatch = useDispatch();
+  const { menuActive } = useSelector((state: any) => state.toggle);
+  console.log(menuActive);
   return (
     <div className="header-container">
       <img
@@ -23,20 +23,17 @@ export const Header = ({ setshowMenu, showMenu }: HeaderProps) => {
         className="img-back"
       />
 
-      {showMenu && <BoxMenu />}
+      {menuActive && <BoxMenu />}
       <div className="header-left-content">
         <img src={logo} alt="logo" className="header-left-img" />
       </div>
-      <div
-        className="header-right-content"
-        
-      >
+      <div className="header-right-content">
         {width <= 375 ? (
           <img
-            src={showMenu ? closeMenu : hamburger}
+            src={menuActive ? closeMenu : hamburger}
             alt="hamburger"
             className="header-right-img"
-            onClick={() => setshowMenu(!showMenu)}
+            onClick={() => dispatch(toggleMenu())}
           />
         ) : (
           navItems.map((item) => (
