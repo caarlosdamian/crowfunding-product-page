@@ -1,0 +1,85 @@
+.middle-container {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.0497193);
+    border-radius: 8px;
+    width: 730px;
+    height: 212px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 600px;
+    padding: 50px;
+
+    &.active{
+        mix-blend-mode: normal;
+        opacity: .7;
+    }
+
+
+
+    @media (max-width: 375px) {
+        width: 327px;
+        height: 412px;
+        padding: 24px;
+    }
+
+    .middle-top-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        @media (max-width: 375px) {
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+
+        .middle-top-container-labels {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 24zapx;
+
+
+            &.test {
+                padding-left: 47px;
+                padding-right: 47px;
+                border-left: 1px solid rgba(0, 0, 0, .15);
+                border-right: 1px solid rgba(0, 0, 0, .15);
+
+                @media (max-width: 375px) {
+                    border-top: 1px solid rgba(0, 0, 0, .15);
+                    border-bottom: 1px solid rgba(0, 0, 0, .15);
+                    border-left: none;
+                    border-right: none;
+                    padding-left: 0;
+                    padding-right: 0;
+                    padding-top: 24px;
+                    padding-bottom: 24px;
+                }
+            }
+
+            .middle-top-container-header-label {
+                font-weight: 700;
+                font-size: 32px;
+                line-height: 39px;
+                display: flex;
+                align-items: center;
+                color: #000000;
+            }
+
+            .middle-top-container-subtitle-label {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 18px;
+                display: flex;
+                align-items: center;
+                color: #7A7A7A;
+            }
+        }
+    }
+}
