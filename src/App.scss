@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  pading: 0;
+  box-sizing: border-box;
+  font-family: 'Commissioner';
+  font-style: normal;
+}
+
+body {
+  height: 100vh;
+  background: #FAFAFA;
+}
+
+.main {
+  height: 100vh;
+
+  &.active {
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.0001) 100%);
+    mix-blend-mode: normal;
+    opacity: 0.9;
+  }
+}

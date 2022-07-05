@@ -1,0 +1,22 @@
+.box-menu-container {
+    position: absolute;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.0497193);
+    border-radius: 8px;
+    width: 327px;
+    height: 212px;
+    top: 88px;
+    padding: 0;
+
+    :nth-child(2) {
+        border-bottom: 1px solid rgba(47, 47, 47, .1);
+        border-top: 1px solid rgba(47, 47, 47, .1);
+        width: 327px;
+    }
+
+    .item-box-menu {
+        list-style: none;
+        padding: 24px;
+        text-align: start;
+    }
+}

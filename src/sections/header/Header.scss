@@ -1,0 +1,50 @@
+.header-container {
+    height: 400px;
+    padding: 50px 165px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: linear-gradient(180deg, #2e2e2e 0%, rgba(0, 0, 0, 0.0001) 30%);
+    mix-blend-mode: normal;
+    position: relative;
+
+    @media (max-width: 375px) {
+        padding: 32px 24px;
+    }
+
+
+    .img-back {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 100vw;
+        max-height: 400px;
+        object-fit: cover;
+    }
+
+    .header-right-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 34px;
+
+        .header-right-img {
+            cursor: pointer;
+        }
+
+        .navb-item {
+            font-family: 'Commissioner';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 16px;
+            color: #FFFFFF;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration-line: underline;
+            }
+        }
+    }
+}
