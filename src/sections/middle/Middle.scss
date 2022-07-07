@@ -23,6 +23,8 @@
         width: 327px;
         height: 412px;
         padding: 24px;
+        top: 552px;
+
     }
 
     .middle-top-container {
@@ -41,8 +43,10 @@
             align-items: flex-start;
             justify-content: center;
             flex-direction: column;
-            margin-top: 24zapx;
-
+            @media (max-width: 375px) {
+                margin-top: 12px;
+                gap: 10px;
+            }
 
             &.test {
                 padding-left: 47px;

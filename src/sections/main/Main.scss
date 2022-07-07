@@ -1,0 +1,50 @@
+.main-container {
+    width: 730px;
+    height: 1197px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.0497193);
+    border-radius: 8px;
+    top: 837px;
+    padding: 48px;
+
+
+    .main-header{
+        font-family: 'Commissioner';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #000000;
+        margin-bottom: 35px;
+    }
+
+    .main-top-text {
+        font-family: 'Commissioner';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+        color: #7A7A7A;
+        margin-bottom: 35px;
+    }
+    .main-down-text{
+        font-family: 'Commissioner';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+        color: #7A7A7A;
+    }
+}
