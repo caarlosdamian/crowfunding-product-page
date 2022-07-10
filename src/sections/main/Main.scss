@@ -11,6 +11,12 @@
   border-radius: 8px;
   top: 837px;
   padding: 48px;
+  @media (max-width: 375px) {
+    padding: 24px;
+    width: 327px;
+    height: 1655px;
+    top: 988px;
+  }
 
   .main-header {
     font-family: "Commissioner";
@@ -23,6 +29,10 @@
     text-align: center;
     color: #000000;
     margin-bottom: 35px;
+    @media (max-width: 375px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 
   .main-top-text {
@@ -35,6 +45,10 @@
     align-items: center;
     color: #7a7a7a;
     margin-bottom: 35px;
+    @media (max-width: 375px) {
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
   .main-down-text {
     font-family: "Commissioner";
@@ -46,5 +60,9 @@
     align-items: center;
     color: #7a7a7a;
     margin-bottom: 40px;
+    @media (max-width: 375px) {
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
 }
