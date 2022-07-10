@@ -1,0 +1,80 @@
+.subcription-box-wrapper {
+  padding: 32px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+  .subcription-top-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    .subcription-header {
+      font-family: "Commissioner";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+      display: flex;
+      align-items: center;
+      color: #000000;
+    }
+    .subcription-subtext {
+      font-family: "Commissioner";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+      display: flex;
+      align-items: center;
+      text-align: right;
+      color: #3cb3ab;
+    }
+  }
+  .subcription-description {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    color: #7a7a7a;
+  }
+  .subcription-bottom-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    .subcrition-bottom-left {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      .subcription-quantity {
+        font-family: "Commissioner";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
+        display: flex;
+        align-items: center;
+        color: #000000;
+      }
+      .subcription-prhase {
+        font-family: "Commissioner";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+        color: #7a7a7a;
+      }
+    }
+  }
+}

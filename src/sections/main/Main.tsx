@@ -1,4 +1,5 @@
 import React from "react";
+import { SubBox } from "../../components/subBox/SubBox";
 import "./Main.scss";
 
 export const Main = () => {
@@ -17,6 +18,7 @@ export const Main = () => {
         desk space below your computer to allow notepads, pens, and USB sticks
         to be stored under the stand.
       </span>
+      <SubBox/>
     </div>
   );
 };
