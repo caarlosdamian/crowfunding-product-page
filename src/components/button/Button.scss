@@ -22,4 +22,9 @@
           width: 204px;  
         }
     }
+    &.disable{
+        background: #CBCBCB;
+        mix-blend-mode: normal;
+        opacity: 0.5;
+    }
 }

@@ -1,27 +1,30 @@
 import React from "react";
+import { ISubscription } from "../../interfaces";
 import { Button } from "../button/Button";
 import "./SubBox.scss";
 
-interface SubBoxProps {
-  title: string;
-  price: number;
-  description: string;
+interface ISubBoxProps {
+  subscription: ISubscription;
 }
 
-export const SubBox = () => {
+export const SubBox = ({ subscription }: ISubBoxProps) => {
+  const { title, pledge, description, quantity, disable } = subscription;
   return (
     <div className="subcription-box-wrapper">
       <div className="subcription-top-container">
-        <span className="subcription-header">Bamboo Stand</span>
-        <span className="subcription-subtext">Pledge $25 or more</span>
+        <span className={`subcription-header ${disable && 'disable' || ''}`}>{title}</span>
+        <span className={`subcription-subtext ${disable && 'disable' || ''}`}>Pledge ${pledge} or more</span>
       </div>
-      <span className="subcription-description">You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.</span>
+      <span className={`subcription-description ${disable && 'disable' || ''}`}>{description}</span>
       <div className="subcription-bottom-container">
         <div className="subcrition-bottom-left">
-          <span className="subcription-quantity">64</span>
-          <span className="subcription-prhase">left</span>
+          <span className={`subcription-quantity ${disable && 'disable' || ''}`}>{quantity}</span>
+          <span className={`subcription-prhase ${disable && 'disable' || ''}`}>left</span>
         </div>
-        <Button label="Select Reward" type="primary"/>
+        <Button
+          label={(disable && "Out of stock") || "Select Reward"}
+          type={(disable && "disable") || "primary"}
+        />
       </div>
     </div>
   );

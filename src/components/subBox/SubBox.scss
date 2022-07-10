@@ -31,6 +31,9 @@
       display: flex;
       align-items: center;
       color: #000000;
+      &.disable{
+        opacity: .5;
+      }
     }
     .subcription-subtext {
       font-family: "Commissioner";
@@ -42,6 +45,9 @@
       align-items: center;
       text-align: right;
       color: #3cb3ab;
+      &.disable{
+        opacity: .5;
+      }
     }
   }
   .subcription-description {
@@ -57,6 +63,9 @@
       font-weight: 400;
       font-size: 14px;
       line-height: 24px;
+    }
+    &.disable{
+      opacity: .5;
     }
   }
   .subcription-bottom-container {
@@ -84,6 +93,9 @@
         display: flex;
         align-items: center;
         color: #000000;
+        &.disable{
+          opacity: .5;
+        }
       }
       .subcription-prhase {
         font-family: "Commissioner";
@@ -94,6 +106,9 @@
         display: flex;
         align-items: center;
         color: #7a7a7a;
+        &.disable{
+          opacity: .5;
+        }
       }
     }
   }
