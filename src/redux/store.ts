@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
+import subcriptionReducer from "./subcription/subcriptionSlice";
 import toggleReducer from "./toggle/toggleSlice";
 
 export const store = configureStore({
   reducer: {
     toggle: toggleReducer,
+    subcriptions:subcriptionReducer
   },
 });
 
