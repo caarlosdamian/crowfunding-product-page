@@ -6,7 +6,6 @@ import "./Main.scss";
 
 export const Main = () => {
   const subcriptions = useSelector((state: any) => state.subcriptions);
-  console.log(subcriptions);
   return (
     <div className="main-container">
       <h2 className="main-header">About this project</h2>

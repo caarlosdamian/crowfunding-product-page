@@ -4,11 +4,17 @@ import { Top } from "./sections/top/Top";
 import "./App.scss";
 import { Middle } from "./sections/middle/Middle";
 import { Main } from "./sections/main/Main";
+import { Modal } from "./components/modal/Modal";
+import { Overlay } from "./components/overlay/Overlay";
 
 function App() {
   const { menuActive } = useSelector((state: any) => state.toggle);
   return (
     <main className={`main ${(menuActive && "active") || ""}`}>
+     {menuActive && <Overlay/>}
+
+      {false &&  <Modal/>}
+     
       <Header />
       <Top showMenu={menuActive} />
       <Middle/>

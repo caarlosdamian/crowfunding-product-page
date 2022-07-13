@@ -14,7 +14,6 @@ export const Header = () => {
   const { width } = useWindowSize();
   const dispatch = useDispatch();
   const { menuActive } = useSelector((state: any) => state.toggle);
-  console.log(menuActive);
   return (
     <div className="header-container">
       <img
