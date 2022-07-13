@@ -1,7 +1,10 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
 import closeModal from '../../images/icon-close-modal.svg'
+import { ISubscription } from '../../interfaces';
 import { toogleModal } from '../../redux/toggle/toggleSlice';
+import { subscriptions } from '../../utils/data';
+import { SubModalBox } from '../subModalBox/subModalBox';
 import './Modal.scss'
 
 export const Modal = () => {
@@ -13,6 +16,12 @@ export const Modal = () => {
             <h1 className="modal-header">Back this project</h1>
             <p className="modal-text">Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world? </p>
         </div>
+        <div className="subcriptions-container">
+        {subscriptions.map((item:ISubscription)=>(
+        <SubModalBox subscription={item}/>
+        ))}
+        </div>
+       
     </div>
   )
 }

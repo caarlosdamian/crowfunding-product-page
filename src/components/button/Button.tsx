@@ -3,7 +3,7 @@ import './Button.scss'
 
 interface BProps {
   label: string;
-  onClick: (() => Promise<void>) | undefined;
+  onClick?: (() => Promise<void>) | undefined;
   type: string;
 }
 

@@ -3,12 +3,16 @@
     border: 1px solid rgba(0, 0, 0, 0.0497193);
     border-radius: 8px;
     width: 730px;
-    height: 905px;
+    max-height: 1001px;
     z-index: 99999;
-    position: absolute;
     top: 184px;
-    left: 355px;
     padding: 48px;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
 
     .modal-content {
         position: relative;
@@ -30,6 +34,7 @@
             align-items: center;
             text-align: center;
             color: #000000;
+            margin-bottom: 19px;
         }
 
         .modal-text {
@@ -41,6 +46,17 @@
             display: flex;
             align-items: center;
             color: #7A7A7A;
+            margin-bottom: 32px;
         }
+    }
+    .subcriptions-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 24px;
+        width: 634px;
+        height: 701px;
+        margin-top: 80px;
     }
 }

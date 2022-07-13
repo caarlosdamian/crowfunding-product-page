@@ -8,3 +8,7 @@ export interface ISubscription {
     buttonLabel: string;
     principal: boolean;
 }
+
+export interface ISubBoxProps {
+    subscription: ISubscription;
+  }

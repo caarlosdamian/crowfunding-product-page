@@ -1,0 +1,226 @@
+.sub-modal-container {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    padding-top: 33px;
+    padding-bottom: 33px;
+    width: 100%;
+    height: 100%;
+
+
+    &.active {
+        border: 2px solid #3CB3AB;
+
+    }
+
+    .sub-modal-descripton {
+        font-family: 'Commissioner';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 28px;
+        width: 530px;
+        display: flex;
+        align-items: center;
+        color: #7A7A7A;
+        // padding-left: 28px;
+        // padding-right: 28px;
+        &.active{
+            margin-bottom: 32px;
+
+        }
+    }
+
+
+
+    .top-sub-modal-container {
+        padding-left: 28px;
+        padding-right: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        gap: 24px;
+        margin-bottom: 17px;
+
+
+        .left-check-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            input[type="checkbox"] {
+                /* Add if not using autoprefixer */
+                -webkit-appearance: none;
+                /* Remove most all native input styles */
+                appearance: none;
+                /* For iOS < 15 */
+                background-color: var(--form-background);
+                /* Not removed via appearance */
+                margin: 0;
+
+                font: inherit;
+                color: currentColor;
+                width: 1.15em;
+                height: 1.15em;
+                border: 1px solid #7A7A7A;
+                border-radius: 50%;
+                transform: translateY(-0.075em);
+
+                display: grid;
+                place-content: center;
+            }
+
+            input[type="checkbox"]::before {
+                content: "";
+                width: 0.65em;
+                height: 0.65em;
+                clip-path: circle(50%);
+                transform: scale(0);
+                transform-origin: bottom left;
+                transition: 120ms transform ease-in-out;
+                box-shadow: inset 1em 1em var(--form-control-color);
+                /* Windows High Contrast Mode */
+                background-color: #3CB3AB;
+            }
+
+            input[type="checkbox"]:checked::before {
+                transform: scale(1);
+            }
+
+        }
+
+        .top-sub-modal-container-left {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 17px;
+            width: 100%;
+
+            .top-sub-modal-header-left {
+                font-family: 'Commissioner';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 20px;
+                display: flex;
+                align-items: center;
+                color: #000000;
+            }
+
+            .top-sub-modal-subtitle-left {
+                font-family: 'Commissioner';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 20px;
+                display: flex;
+                align-items: center;
+                color: #3CB3AB;
+
+            }
+        }
+
+        .top-sub-modal-container-right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            .top-sub-modal-header-right {
+                font-family: 'Commissioner';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 22px;
+                display: flex;
+                align-items: center;
+                color: #000000;
+            }
+
+            .top-sub-modal-subtitle-right {
+                font-family: 'Commissioner';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 18px;
+                display: flex;
+                align-items: center;
+                color: #7A7A7A;
+
+            }
+        }
+
+
+    }
+
+    .bottom-sub-modal-container {
+        padding-top: 24px ;
+        padding-left: 28px;
+        padding-right: 28px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid rgba(0, 0, 0, .15);
+
+        .left-bottom-box-container{
+            .left-bottom-header{
+                font-family: 'Commissioner';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 28px;
+                color: #7A7A7A;
+            }
+        }
+
+        .right-bottom-box-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+
+            .input-bottom-container {
+                border: 1px solid #c8c8c8;
+                border-radius: 24px;
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                width: 100px;
+                height: 48px;
+                text-align: center;
+                .label-imput-bottom {
+                    font-family: 'Commissioner';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 17px;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+
+                    color: #000000;
+
+                    mix-blend-mode: normal;
+                    opacity: 0.25;
+                }
+
+                .bottom-container-input {
+                    width: 100%;
+                    outline: none;
+                    border: none;
+                }
+            }
+
+        }
+    }
+
+}

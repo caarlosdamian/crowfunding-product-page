@@ -20,7 +20,7 @@ export const subscriptions = [
     title: "Pledge with no reward",
     description:
       "Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.",
-    quantity: 101,
+    quantity: 0,
     disable: false,
     buttonLabel: "Select Reward",
     principal: false,
