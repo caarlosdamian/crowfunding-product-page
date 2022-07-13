@@ -3,13 +3,13 @@ import './Button.scss'
 
 interface BProps {
   label: string;
-  fn?: () => void;
+  onClick: (() => Promise<void>) | undefined;
   type: string;
 }
 
-export const Button = ({ label, fn, type }: BProps) => {
+export const Button = ({ label, type ,onClick}: BProps) => {
   return (
-    <button className={`button ${type}`} onClick={fn}>
+    <button className={`button ${type}`} onClick={onClick}>
       {label}
     </button>
   );

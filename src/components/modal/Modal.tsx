@@ -5,7 +5,7 @@ export const Modal = () => {
   return (
     <div className='modal-container'>
         <div className='modal-content'>
-            hola
+            Modal
         </div>
     </div>
   )

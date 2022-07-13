@@ -8,12 +8,13 @@ import { Modal } from "./components/modal/Modal";
 import { Overlay } from "./components/overlay/Overlay";
 
 function App() {
-  const { menuActive } = useSelector((state: any) => state.toggle);
+  const { menuActive,modal } = useSelector((state: any) => state.toggle);
   return (
     <main className={`main ${(menuActive && "active") || ""}`}>
      {menuActive && <Overlay/>}
+     {modal && <Overlay/>}
 
-      {false &&  <Modal/>}
+      {modal &&  <Modal/>}
      
       <Header />
       <Top showMenu={menuActive} />

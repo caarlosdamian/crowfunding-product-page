@@ -16,7 +16,7 @@ export const ButtonIcon = () => {
           height="56"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g fill="none" fill-rule="evenodd">
+          <g fill="none" fillRule="evenodd">
             <circle
               fill={value ? "#147A73" : "#2F2F2F"}
               cx="28"
@@ -40,7 +40,7 @@ export const ButtonIcon = () => {
             height="56"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g fill="none" fill-rule="evenodd">
+            <g fill="none" fillRule="evenodd">
               <circle
                 fill={value ? "#147A73" : "#2F2F2F"}
                 cx="28"

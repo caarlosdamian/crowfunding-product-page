@@ -1,5 +1,7 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { ISubscription } from "../../interfaces";
+import { toogleModal } from "../../redux/toggle/toggleSlice";
 import { Button } from "../button/Button";
 import "./SubBox.scss";
 
@@ -9,6 +11,13 @@ interface ISubBoxProps {
 
 export const SubBox = ({ subscription }: ISubBoxProps) => {
   const { title, pledge, description, quantity, disable } = subscription;
+  const dispatch = useDispatch();
+
+  const handleOpenModal = async () =>{
+    console.log("open modal");
+    window.scrollTo(0, 0)
+    await dispatch(toogleModal());
+  }
   return (
     <div className="subcription-box-wrapper">
       <div className="subcription-top-container">
@@ -24,6 +33,7 @@ export const SubBox = ({ subscription }: ISubBoxProps) => {
         <Button
           label={(disable && "Out of stock") || "Select Reward"}
           type={(disable && "disable") || "primary"}
+          onClick={!disable && handleOpenModal || undefined}
         />
       </div>
     </div>

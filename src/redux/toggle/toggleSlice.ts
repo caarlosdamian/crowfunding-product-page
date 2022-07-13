@@ -6,6 +6,7 @@ export interface ToggleState {
 
 const initialState = {
   menuActive: false,
+  modal: false,
 };
 export const toggleSlice = createSlice({
   name: "toggle",
@@ -16,10 +17,13 @@ export const toggleSlice = createSlice({
     },
     toogleFalse:(state)=>{
       state.menuActive = false;
+    },
+    toogleModal:(state)=>{
+      state.modal = !state.modal;
     }
   },
 });
 
-export const { toggleMenu,toogleFalse } = toggleSlice.actions;
+export const { toggleMenu,toogleFalse ,toogleModal} = toggleSlice.actions;
 
 export default toggleSlice.reducer;
