@@ -4,9 +4,43 @@
     border-radius: 8px;
     width: 730px;
     height: 905px;
-    z-index: 99999; 
+    z-index: 99999;
     position: absolute;
     top: 184px;
     left: 355px;
-   
+    padding: 48px;
+
+    .modal-content {
+        position: relative;
+
+        .close-modal {
+            position: absolute;
+            top: -20px;
+            left: 635px;
+            cursor: pointer;
+        }
+
+        .modal-header {
+            font-family: 'Commissioner';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #000000;
+        }
+
+        .modal-text {
+            font-family: 'Commissioner';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 30px;
+            display: flex;
+            align-items: center;
+            color: #7A7A7A;
+        }
+    }
 }
