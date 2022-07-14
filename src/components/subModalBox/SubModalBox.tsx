@@ -1,14 +1,15 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import { ISubBoxProps } from "../../interfaces";
+import { toogleModalSuccess } from "../../redux/toggle/toggleSlice";
 import { Button } from "../button/Button";
 import "./subModalBox.scss";
 
 export const SubModalBox = ({ subscription }: ISubBoxProps) => {
   const [selected, setselected] = useState(false);
- const {width} =  useWindowSize()
-  const { buttonLabel, description, disable, pledge, quantity, title } =
-    subscription;
+  const dispatch = useDispatch();
+  const { description, disable, pledge, quantity, title } = subscription;
   return (
     <div
       className={`sub-modal-container ${
@@ -42,9 +43,9 @@ export const SubModalBox = ({ subscription }: ISubBoxProps) => {
         {description}
       </span>
       <div className="top-sub-modal-container-right-mobile">
-          <h1 className="top-sub-modal-header-right-mobile">{quantity}</h1>
-          <h1 className="top-sub-modal-subtitle-right-mobile">left</h1>
-        </div>
+        <h1 className="top-sub-modal-header-right-mobile">{quantity}</h1>
+        <h1 className="top-sub-modal-subtitle-right-mobile">left</h1>
+      </div>
       {selected && quantity !== 0 && (
         <div className="bottom-sub-modal-container">
           <div className="left-bottom-box-container">
@@ -59,7 +60,11 @@ export const SubModalBox = ({ subscription }: ISubBoxProps) => {
                 placeholder="25"
               />
             </div>
-            <Button label="Continue" type="primary small" />
+            <Button
+              label="Continue"
+              type="primary small"
+              onClick={()=>dispatch(toogleModalSuccess())}
+            />
           </div>
         </div>
       )}

@@ -13,6 +13,84 @@
     bottom: 0;
     margin: auto;
 
+    &.success {
+
+        width: 540px;
+        height: 449px;
+        top: 200px;
+
+        @media (max-width:375px) {
+            width: 327px;
+            height: 382px;
+            padding: 24px 40px;
+            top: 140px;
+        }
+    }
+
+    .modal-success-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 24px;
+
+
+        .succes-header {
+
+            font-family: 'Commissioner';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            color: #000000;
+
+            @media (max-width:375px) {
+                font-family: 'Commissioner';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 22px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                color: #000000;
+            }
+        }
+
+        .succes-text {
+            font-family: 'Commissioner';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 30px;
+            /* or 188% */
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            color: #7A7A7A;
+
+            @media (max-width:375px) {
+                font-family: 'Commissioner';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                max-width: 279px;
+                color: #7A7A7A;
+            }
+        }
+    }
+
+
 
     @media (max-width:375px) {
         width: 327px;
@@ -33,6 +111,7 @@
             top: -20px;
             left: 635px;
             cursor: pointer;
+
             @media (max-width:375px) {
                 left: 289px;
                 top: 0px;
@@ -79,6 +158,7 @@
             align-items: center;
             color: #7A7A7A;
             margin-bottom: 32px;
+
 
             @media (max-width:375px) {
                 font-family: 'Commissioner';
