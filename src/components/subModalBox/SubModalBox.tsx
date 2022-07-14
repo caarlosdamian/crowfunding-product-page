@@ -1,20 +1,20 @@
 import React, { useState } from "react";
+import { useWindowSize } from "../../hooks/useWindowSize";
 import { ISubBoxProps } from "../../interfaces";
 import { Button } from "../button/Button";
 import "./subModalBox.scss";
 
 export const SubModalBox = ({ subscription }: ISubBoxProps) => {
   const [selected, setselected] = useState(false);
-  const {
-    buttonLabel,
-    description,
-    disable,
-    pledge,
-    quantity,
-    title,
-  } = subscription;
+ const {width} =  useWindowSize()
+  const { buttonLabel, description, disable, pledge, quantity, title } =
+    subscription;
   return (
-    <div className={`sub-modal-container ${(selected && "active") || ""}`}>
+    <div
+      className={`sub-modal-container ${
+        (selected && !disable && "active") || ""
+      } ${(disable && "disable") || ""}`}
+    >
       <div className={`top-sub-modal-container`}>
         <div className="left-check-container">
           <input
@@ -22,12 +22,15 @@ export const SubModalBox = ({ subscription }: ISubBoxProps) => {
             checked={selected}
             className="checkbox-custom"
             onClick={() => setselected(!selected)}
+            disabled={disable && true}
           />
         </div>
         <div className="top-sub-modal-container-left">
           <h1 className="top-sub-modal-header-left">{title}</h1>
-          {quantity !== 0 && (
-            <h1 className="top-sub-modal-subtitle-left">Pledge ${pledge} or more</h1>
+          {pledge !== 0 && (
+            <h1 className="top-sub-modal-subtitle-left">
+              Pledge ${pledge} or more
+            </h1>
           )}
         </div>
         <div className="top-sub-modal-container-right">
@@ -38,6 +41,10 @@ export const SubModalBox = ({ subscription }: ISubBoxProps) => {
       <span className={`sub-modal-descripton ${(selected && "active") || ""}`}>
         {description}
       </span>
+      <div className="top-sub-modal-container-right-mobile">
+          <h1 className="top-sub-modal-header-right-mobile">{quantity}</h1>
+          <h1 className="top-sub-modal-subtitle-right-mobile">left</h1>
+        </div>
       {selected && quantity !== 0 && (
         <div className="bottom-sub-modal-container">
           <div className="left-bottom-box-container">

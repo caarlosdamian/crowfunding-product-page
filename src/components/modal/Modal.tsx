@@ -4,7 +4,7 @@ import closeModal from '../../images/icon-close-modal.svg'
 import { ISubscription } from '../../interfaces';
 import { toogleModal } from '../../redux/toggle/toggleSlice';
 import { subscriptions } from '../../utils/data';
-import { SubModalBox } from '../subModalBox/subModalBox';
+import { SubModalBox } from '../subModalBox/SubModalBox';
 import './Modal.scss'
 
 export const Modal = () => {

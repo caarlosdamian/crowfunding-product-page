@@ -7,12 +7,23 @@
     z-index: 99999;
     top: 184px;
     padding: 48px;
-
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
     margin: auto;
+
+
+    @media (max-width:375px) {
+        width: 327px;
+        height: 1359px;
+        padding: 24px;
+        top: 500px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        justify-content: center;
+    }
 
     .modal-content {
         position: relative;
@@ -22,6 +33,10 @@
             top: -20px;
             left: 635px;
             cursor: pointer;
+            @media (max-width:375px) {
+                left: 289px;
+                top: 0px;
+            }
         }
 
         .modal-header {
@@ -35,6 +50,23 @@
             text-align: center;
             color: #000000;
             margin-bottom: 19px;
+
+            @media (max-width:375px) {
+                font-family: 'Commissioner';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 22px;
+                /* identical to box height */
+                padding-left: 24px;
+                padding-right: 24px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+
+                color: #000000;
+
+            }
         }
 
         .modal-text {
@@ -47,9 +79,25 @@
             align-items: center;
             color: #7A7A7A;
             margin-bottom: 32px;
+
+            @media (max-width:375px) {
+                font-family: 'Commissioner';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+                display: flex;
+                align-items: center;
+                color: #7A7A7A;
+                margin-bottom: 24px;
+                padding-bottom: 0;
+                padding-left: 24px;
+                padding-right: 24px;
+            }
         }
     }
-    .subcriptions-container{
+
+    .subcriptions-container {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -58,5 +106,12 @@
         width: 634px;
         height: 701px;
         margin-top: 80px;
+
+        @media (max-width:375px) {
+            width: 327px;
+            height: 1359px;
+            padding: 24px 0;
+            margin-top: 0;
+        }
     }
 }

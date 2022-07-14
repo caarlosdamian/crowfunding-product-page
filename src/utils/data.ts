@@ -16,7 +16,7 @@ export const navItems = [
 export const subscriptions = [
   {
     id: 1,
-    pledge: 25,
+    pledge: 0,
     title: "Pledge with no reward",
     description:
       "Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.",
@@ -55,7 +55,7 @@ export const subscriptions = [
       "You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list.  Shipping is included.",
     quantity: 0,
     disable: true,
-    buttonLabel: "Select Reward",
+    buttonLabel: "Out of stock",
     principal: true,
   },
 ];
